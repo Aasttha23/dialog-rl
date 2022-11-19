@@ -7,7 +7,7 @@ import requests
 from tqdm import tqdm
 from vocab import Vocab
 from embeddings import GloveEmbedding, KazumaCharEmbedding
-from util.dataset import Dataset, Ontology
+from dataset import Dataset, Ontology
 
 
 root_dir = os.path.dirname(__file__)
