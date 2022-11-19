@@ -50,7 +50,7 @@ if __name__ == '__main__':
         for s in splits:
             fname = '{}.json'.format(s)
             logging.warn('Annotating {}'.format(s))
-            dataset[s] = Dataset.annotate_raw(os.path.join(draw, fname))
+            dataset[s] = Dataset.annotate_raw(os.path.join(draw), fname)
             dataset[s].numericalize_(vocab)
             ontology = ontology + dataset[s].extract_ontology()
             with open(os.path.join(dann, fname), 'wt') as f:
