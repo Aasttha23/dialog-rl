@@ -49,6 +49,7 @@ if __name__ == '__main__':
         vocab.word2index(['<sos>', '<eos>'], train=True)
         for s in splits:
             fname = '{}.json'.format(s)
+            print("fname-", fname)
             logging.warn('Annotating {}'.format(s))
             dataset[s] = Dataset.annotate_raw(os.path.join(draw), fname)
             dataset[s].numericalize_(vocab)
