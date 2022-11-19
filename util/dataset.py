@@ -186,7 +186,7 @@ class Dataset:
     def from_dict(cls, d, elmo=None):
         return cls([Dialogue.from_dict(dd) for dd in tqdm(d['dialogues'])])
 
-
+    @classmethod
     def annotate_raw(cls, fname):
         with open(fname) as f:
             data = json.load(f)
